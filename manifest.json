@@ -20,7 +20,7 @@
                 "http://*/*", "https://*/*"
             ],
             "js": [
-                "jquery.js", "myscript.js"
+                "jquery.js", "info.js"
             ]
         }],
         "content_security_policy": "script-src 'self'; object-src 'self'"

@@ -7,9 +7,10 @@
 //   $("#pass").val("ab");
 // )};
 
-
-$("#body").val("San Francisco");
-$("#signin-email").val("twitter");
-$("#signin-password").val("a");
-$("#email").val("facebook");
-$("#pass").val("ab");
+  // $("#signin-email").val("hello");
+  // $("#signin-password").val("a");
+  //
+  //
+  // $("#email").val("facebook");
+  // $("#pass").val("ab");
+  // $("#body").val("San Francisco");
