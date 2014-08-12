@@ -2,67 +2,33 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", "http://0.0.0.0:3000/dashboard", true);
 xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
-      // console.log("xhr", xhr)
 
       var z = JSON.parse(xhr["response"])["dashboard"]
-
       var s = window.name
-      console.log("window1", window.name)
-
-      window.name = $(location).attr('href');
-      // //
-      var ss = window.name
-
-      // console.log("window12", window.name)
-      // console.log("compare", s == ss)
-
-      if (s != ss)
-        s = ss
-
-        console.log("s", s)
 
       for (var i = 0; i < z.length; i++){
-          var site = "https://"+z[i].url+"/"
-          // console.log("i", site)
+        var site = "https://"+z[i].url+"/"
+
         if (site == s){
           // console.log("site", site)
             var c = z[i]
-            // console.log("c", c)
-          }
+        }
       }
 
-
-      // var a = c.username
-      // window.name = a
-      // var p = c.url
-      //
-
-      // url differenet for page and extension
-      // https vs http and www vs nothing like yahoo then twitter and how to the username and password fields
-      // should fill in fields automatically if so click button to submit also or click button in externsion to fill in fields?
-
-
-
-    doSomething(c)
+      //find different fields by id or ....
+      //should fill in fields when button is clicked
+      //add login page
+      //encrypt and decrypt password
+      //maybe api for screenshot in dashboard cards
+      //stripe if time more than ten passwords
+      //tabs in extension Fill it/Add it(new site??)/Generate it(password)
+      //in website about and contact page
   }
 }
 xhr.send();
 
-
-function doSomething(object){
-
-  console.log("username", object.username)
-  console.log("pw", object.password)
-  // chrome.browserAction.onClicked.addListener(function(activeTab)
-  // {
-    // console.log("email", object)
-    $("#signin-email").val(object.username);
-    $("#signin-password").val(object.password);
-    // $( "button" ).click();
-
-    //
-    // $("#email").val("facebook");
-    // $("#pass").val("ab");
-    // $("#body").val("San Francisco");
-  // )};
-}
+console.log("username", "object.username")
+console.log("pw", "object.password")
+// twitter, facebook, yahoo mail, wellsfargo, linkedin, amazon, ebay, pinterest, paypal, tumblr, instagram, netflix salesforce, vimeo
+$("#signin-email, #email, #username, #userid, #session_key-login, #ap_email, #userEmail, #user_email, #login_email, #signup_email, #id_username, #lgnId1, #EmailAddress, #user, #JobSeekerLoginV3_cbsys_login_email, #login_field").val("ayazm");
+$("#signin-password, #pass, #passwd, #password, #session_password-login, #ap_password, #userPassword, #user_password, #login_password, #signup_password, #id_password, #pwdId1, #Password, #JobSeekerLoginV3_cbsys_login_password").val("object.password");
