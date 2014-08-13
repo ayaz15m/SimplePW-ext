@@ -1,6 +1,7 @@
 chrome.tabs.getSelected(null, function(tab) {
-  document.getElementById('currentLink').innerHTML = tab.url;
-  window.name = document.getElementById('currentLink').innerHTML = tab.url;
+  // document.getElementById('currentLink').innerHTML = tab.url;
+  window.name = tab.url;
+  $("#exampleInputUrl1").val(tab.url)
 });
 
 function hello() {
@@ -9,4 +10,13 @@ function hello() {
   });
 }
 
-document.getElementById('clickme').addEventListener('click', hello);
+// document.getElementById('clickme').addEventListener('click', fill);
+// function fill(){
+// $("#body").val("San Francisco")
+//
+// }
+
+document.getElementById('clickme').addEventListener('click', fill);
+function fill(){
+$("#body").val("San Francisco");
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+    <meta name="description" content="A basic template for a Chrome Extension using Twitter Bootstrap 3">
+    <meta name="author" content="Elliot Hesp">
+
+    <title>SimplePW</title>
+
+    <!-- Scripts -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Cascading Style Sheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="popup.html">SimplePW</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="popup.html"><span class="glyphicon glyphicon-home"></span> Home</a>
+          </li>
+          <li>
+            <a href="two.html"><span class="glyphicon glyphicon-plus"></span> Add Site</a>
+          </li>
+          <li>
+            <a href="three.html"><span class="glyphicon glyphicon-asterisk"></span> New Pw</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><center><form role="form">
+      <div class="form-group">
+        <label for="exampleInputEmail1">URL</label>
+        <input type="email" class="form-control" id="exampleInputUrl1" placeholder="Copy and paste in URL">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input type="description" class="form-control" id="exampleInputDescription1" placeholder="Description">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Username</label>
+        <input type="name" class="form-control" id="exampleInputUsername1" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form></center><br><br>
+
+
+    <!-- <p id="currentLink">Loading ...</p> -->
+
+    <!-- <ul id="savedLinks"></ul> -->
+
+    <!-- <center>
+      <a href="https://www.facebook.com/" target="_newtab">Facebook</a><br>
+      <a href="https://twitter.com/" target="_newtab">Twitter</a><br>
+      <a href="http://mapper-ayaz.herokuapp.com/" target="_newtab">Mapper</a><br><br><br>
+
+      <button id="clickme" class="btn btn-info">Fill in!</button>
+    </center> -->
+
+    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script type="text/javascript" src="info.js"></script>
+
+  </body>
+</html>
