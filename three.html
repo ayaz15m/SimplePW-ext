@@ -20,7 +20,7 @@
 
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
-        <a class="navbar-brand" href="popup.html">SimplePW</a>
+        <a class="navbar-brand" href="http://0.0.0.0:3000/" target="_newtab">SimplePW</a>
       </div>
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
@@ -31,12 +31,22 @@
             <a href="two.html"><span class="glyphicon glyphicon-plus"></span> Add Site</a>
           </li>
           <li>
-            <a href="three.html"><span class="glyphicon glyphicon-asterisk"></span> New Pw</a>
+            <a href="three.html"><span class="glyphicon glyphicon-asterisk"></span> New PW</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    
+    <br><br><center>
+      <h4>Random Password Generator</h4><br>
+        <form name="randform">
+      <!-- <input type="button" value="Create Random String"> -->
+      <input type="text" name="randomfield" value="" class="form-control" id="random"><br>
+      <a href="three.html"><input type="button" value="Different Password" class="btn btn-primary"></a>
+    </form></center>
+
+    <script type="text/javascript" src="random.js"></script>
+    <script type="text/javascript" src="info.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
   </body>
 </html>

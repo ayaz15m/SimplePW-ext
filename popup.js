@@ -16,7 +16,11 @@ function hello() {
 //
 // }
 
-document.getElementById('clickme').addEventListener('click', fill);
-function fill(){
-$("#body").val("San Francisco");
-}
+// document.getElementById('clickme').addEventListener('click', fill);
+// function fill(){
+// $("#body").val("San Francisco");
+// }
+
+
+
+// $("#random").val("San Francisco")
