@@ -1,3 +1,16 @@
+// chrome.webRequest.onSendHeaders.addListener(
+//     function(info) {
+//       var headers = info.responseHeaders;
+//       var throttleHeader = X-Chrome-Exponential-Throttling: disable;
+//       headers.push(throttleHeader);
+//       return {responseHeaders: headers};
+//     },
+//     {
+//         urls: ['*://*/*'], // Pattern to match all http(s) pages
+//         types: ['sub_frame', 'xmlhttprequest']
+//     },
+//     ['blocking', 'responseHeaders']
+// );
 // chrome.webRequest.onHeadersReceived.addListener(function(details) {
 //     // ... your code that checks whether the request should be blocked ...
 //     //  (omitted for brevity)

@@ -12,7 +12,7 @@
     "128": "icon.png"
   },
   "permissions": [
-      "tabs", "http://*/*", "activeTab", "http://0.0.0.0:3000/dashboard"
+      "tabs", "http://*/*", "activeTab", "webRequest","webRequestBlocking", "http://0.0.0.0:3000/dashboard"
     ],
     "background": {
       "scripts": ["./js/bg.js"],

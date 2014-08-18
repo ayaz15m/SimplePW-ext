@@ -2,8 +2,8 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", "http://0.0.0.0:3000/dashboard", true);
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
-    console.log("error",xhr)
-    if(xhr["statusText"] == "Internal Server Error"){
+    console.log("xhr",xhr)
+    if(xhr["status"] == 403){
       $('#whole').html("<div id='message'></div>");
       $('#message').html("<br><br><br><center><h2>Please login to continue<br><br><a role='menuitem' tabindex='-1' href='http://0.0.0.0:3000/' target='_newtab'>Go to Simple PW</a></h2></center>")
       // $('#dropdown').append("<li role='presentation'>Please log in to continue <a role='menuitem' tabindex='-1' href='http://0.0.0.0:3000/' target='_newtab'>Go to Simple PW</a></li>")
