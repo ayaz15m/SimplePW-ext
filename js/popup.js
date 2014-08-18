@@ -9,23 +9,23 @@ chrome.tabs.getSelected(null, function(tab) {
 // });
 
 // $(document).ready(function(){
-$('#clickme').on('click', function() {
-  chrome.runtime.sendMessage({ data: "test"}, function(response){
-    console.log(response);
-  });
-});
-
-
-// document.getElementById('clickme').addEventListener('click', hello);
-
-function hello(){
-  console.log("hello")
-  // console.log()
-  // $("#body").val("Santa");
-//   chrome.tabs.executeScript(null,
-//       {code:"document.body.style.backgroundColor='" + e.target.id + "'"});
-//       console.log(e.target.id)
-//   window.close();
+// $('#clickme').on('click', function() {
+//   chrome.runtime.sendMessage({ data: "test"}, function(response){
+//     console.log(response);
+//   });
+// });
+//
+//
+// // document.getElementById('clickme').addEventListener('click', hello);
+//
+// function hello(){
+//   console.log("hello")
+//   // console.log()
+//   // $("#body").val("Santa");
+// //   chrome.tabs.executeScript(null,
+// //       {code:"document.body.style.backgroundColor='" + e.target.id + "'"});
+// //       console.log(e.target.id)
+// //   window.close();
+// // }
+//
 // }
-
-}
