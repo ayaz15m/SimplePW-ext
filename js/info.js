@@ -7,18 +7,19 @@ xhr.onreadystatechange = function() {
       var s = window.name
       console.log(window.name)
 
-      // if(z.length == 0){
-      //   $('#home').html("<div id='message'></div>");
-      //   $('#message').html("<h2>No sites found!</h2>")
-      //
-      //   $('#message').append("<p>Please login or add sites.</p>")
-      //   $('#message').append("<a href='http://0.0.0.0:3000/' target='_newtab'>Simple PW</a>")
-      // }
+      // console.log(z.length)
+      if(z.length == 0){
+        $('#home').html("<div id='message'></div>");
+        $('#message').html("<h2>No sites found!</h2>")
+
+        $('#message').append("<p>Please login or add sites.</p>")
+        $('#message').append("<a href='http://0.0.0.0:3000/' target='_newtab'>Simple PW</a>")
+      }
 
 
       for (var i = 0; i < z.length; i++){
         var site = z[i].url
-        // console.log(i, z[i].description)
+        // console.log(i, z[i].url)
         $('#dropdown').append("<li role='presentation'><a role='menuitem' tabindex='-1' href='" + site + "' target='_newtab'>" + z[i].description + "</a></li>")
 
         if (site == s){
