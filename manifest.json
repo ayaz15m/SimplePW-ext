@@ -15,8 +15,8 @@
       "tabs", "http://*/*", "activeTab", "http://0.0.0.0:3000/dashboard"
     ],
     "background": {
-      "persistent": true,
-      "scripts": ["./js/bg.js"]
+      "scripts": ["./js/bg.js"],
+      "persistent": true
     },
   "content_scripts": [
         {
