@@ -1,8 +1,8 @@
 $('#form').submit(function() {
   event.preventDefault();
   if (document.getElementById('exampleInputUrl1').value == "" || document.getElementById('exampleInputDescription1').value == "" || document.getElementById('exampleInputUsername1').value == "" || document.getElementById('exampleInputPassword1').value == "" ) {
-    if($('#warn').val() == null || $('#warn').val() == ""){
-      $('#contact_form').prepend("<h3 id='warn'><font color='red'>All fields are required</font></h3><br><br>");
+    if($('#warn').val() == null){
+      $('#contact_form').prepend("<h3><font color='red' id='warn'>All fields are required</font></h3><br><br>");
     }
   } else {
     var formData = {
