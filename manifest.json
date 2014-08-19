@@ -12,19 +12,15 @@
     "128": "icon.png"
   },
   "permissions": [
-      "tabs", "http://*/*", "activeTab", "webRequest","webRequestBlocking", "http://0.0.0.0:3000/dashboard"
+      "tabs", "http://*/*", "activeTab", "webRequest", "http://0.0.0.0:3000/dashboard"
     ],
-    "background": {
-      "scripts": ["./js/bg.js"],
-      "persistent": true
-    },
   "content_scripts": [
         {
             "matches": [
                 "http://*/*", "https://*/*"
             ],
             "js": [
-                "./js/jquery.js", "./js/info.js"
+                "./js/info.js"
             ]
         }],
         "content_security_policy": "script-src 'self'; object-src 'self'"
