@@ -2,8 +2,6 @@
 <html>
   <head>
       <meta charset="utf-8">
-    <meta name="description" content="A basic template for a Chrome Extension using Twitter Bootstrap 3">
-    <meta name="author" content="Elliot Hesp">
 
     <title>SimplePW</title>
 
@@ -35,13 +33,44 @@
       </div>
     </nav>
 
-    <br><center>
+    <center>
       <div id="contact_form">
       <br><br>
       <form id="form" role="form" method="POST" action="#">
         <div class="form-group">
-          <label for="exampleInputEmail1">URL</label>
-          <input type="text" class="form-control" id="exampleInputUrl1" placeholder="Copy and paste in URL">
+          <label for="exampleInputEmail1">Site</label><br>
+          <select id="exampleInputUrl1" class="btn btn-default btn-sm dropdown-toggle">
+            <option value='' selected='selected'>Select Site</option>
+            <option value="1">Twitter</option>
+            <option value="2">Facebook</option>
+            <option value="3">Yahoo Mail</option>
+            <option value="4">Wells Fargo</option>
+            <option value="5">Linkedin</option>
+            <option value="6">Ebay</option>
+            <option value="7">Pinterest</option>
+            <option value="8">Paypal</option>
+            <option value="9">Tumblr</option>
+            <option value="10">Instagram</option>
+            <option value="11">Netflix</option>
+            <option value="12">Salesforce</option>
+            <option value="13">Vimeo</option>
+            <option value="14">Bleacher Report</option>
+            <option value="15">Aol</option>
+            <option value="16">Monster</option>
+            <option value="17">Xfinity/Comcast</option>
+            <option value="18">CareerBuilder</option>
+            <option value="19">Github</option>
+            <option value="20">Imgur</option>
+            <option value="22">NY Times</option>
+            <option value="23">AT&T</option>
+            <option value="24">Target</option>
+            <option value="25">Bank of America</option>
+            <option value="26">Tripadvisor</option>
+            <option value="27">Wall St Cheat Sheet</option>
+            <option value="28">Fandango</option>
+            <option value="29">Craigslist</option>
+            <option value="30">White Pages</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Description</label>
@@ -62,5 +91,7 @@
 
     <script type="text/javascript" src="./js/send_form.js"></script>
     <script type="text/javascript" src="./js/popup.js"></script>
+    <script type="text/javascript" src="./js/crypto.js"></script>
+
   </body>
 </html>
