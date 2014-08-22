@@ -1,3 +1,4 @@
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "http://0.0.0.0:3000/dashboard", true);
 xhr.onreadystatechange = function() {
@@ -17,7 +18,7 @@ xhr.onreadystatechange = function() {
 
       // console.log(z.length)
       if(z.length == 0){
-        $('#home').html("<div id='message'></div>");
+        $('#ext').html("<div id='message'></div>");
         $('#message').html("<h2>No sites found!</h2>")
 
         $('#message').append("<p>Please add sites.</p>")
@@ -44,17 +45,23 @@ xhr.onreadystatechange = function() {
 xhr.send();
 
 function doSomething(object){
-  // window.username = object.username
-  // window.password = object.password
-
-  // console.log('object', object)
   console.log("username", object.username)
-  console.log("pw", object.password)
+  console.log("pw", object.password);
 
-  // var ayaz = prompt("Secret Passphrase")
-  // var decrypted = CryptoJS.AES.decrypt(encryptedAES, ayaz);
-  // console.log("prompt", ayaz)
-  // console.log("decrypted1",decrypted.toString(CryptoJS.enc.Utf8));
+
+  // var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase", { format: JsonFormatter });
+  //
+  //   alert(decrypted.toString(CryptoJS.enc.Utf8));
+  //
+
+
+
+  // var decrypted = CryptoJS.AES.decrypt(JsonFormatter.parse(object.password), "ayazayaz");
+  // debugger;
+  // console.log('decrypted', decrypted, decrypted.toString());
+  // console.log("d2", decrypted.toString(CryptoJS.enc.Utf8))
+
+
 
   //twitter, facebook, yahoo mail, wellsfargo, linkedin, amazon, ebay, pinterest, paypal, tumblr, instagram, netflix salesforce, vimeo
   //bleacherreport, aol, monster, xfinity/comcast, careerbuilder, github ---20

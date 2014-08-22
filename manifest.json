@@ -1,8 +1,8 @@
 {
-  "name": "Extension Menu",
+  "name": "SimplePW",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "My extension",
+  "description": "Extension links with Simplepw.com",
   "browser_action": {
     "default_icon": "icon.png",
     "default_menu": "Menu",
@@ -20,8 +20,8 @@
                 "http://*/*", "https://*/*"
             ],
             "js": [
-                "./js/info.js", "./js/jquery.js"
+                "./js/info.js", "./js/jquery.js", "./js/crypto.js", "./js/JsonFormatter.js"
             ]
         }],
-        "content_security_policy": "script-src 'self'; object-src 'self'"
+        "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
