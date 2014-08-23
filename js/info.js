@@ -7,28 +7,30 @@ xhr.onreadystatechange = function() {
       $('#whole').html("<div id='message'></div>");
       $('#message').html("<br><br><br><center><h2>Please login to continue<br><br><a role='menuitem' tabindex='-1' href='http://0.0.0.0:3000/' target='_newtab'>Go to Simple PW</a></h2></center>")
     } else {
-      var sites = JSON.parse(xhr["response"])["dashboard"]
-      var current_site = window.name
+      if(xhr["status"] == 404){
 
-      var window_site = $(location).attr('href');
-
-      if(sites.length == 0){
         $('#ext').html("<div id='message'></div>");
         $('#message').html("<h2>No sites found!</h2>")
 
         $('#message').append("<p>Please add sites.</p>")
         $('#message').append("<h3><a href='http://0.0.0.0:3000/' target='_newtab'>Go to Simple PW</a></h3>")
-      }
+      } else {
 
+          var sites = JSON.parse(xhr["response"])["dashboard"]
+          var current_site = window.name
 
-      for (var i = 0; i < sites.length; i++){
-        var site = sites[i].url
+          var window_site = $(location).attr('href');
 
-        $('#dropdown').append("<li role='presentation'><a role='menuitem' tabindex='-1' href='" + site + "' target='_newtab'>" + sites[i].description + "</a></li>")
+        for (var i = 0; i < sites.length; i++){
 
-        if (site == current_site || site == window_site){
-            var c = sites[i]
-            fill(c)
+          var site = sites[i].url
+
+          $('#dropdown').append("<li role='presentation'><a role='menuitem' tabindex='-1' href='" + site + "' target='_newtab'>" + sites[i].description + "</a></li>")
+
+          if (site == current_site || site == window_site){
+              var c = sites[i]
+              fill(c)
+          }
         }
       }
     }
@@ -37,6 +39,8 @@ xhr.onreadystatechange = function() {
 xhr.send();
 
 function fill(object){
+  // console.log('username', object.username)
+
   $("#signin-email, #email, #username, #userid, #session_key-login, #login-email, #UsernameBox, #LoginForm_username, #ap_email, #userEmail, #user_email, #login_email, #inputEmailHandle, #signup_email, #id_username, #lgnId1, #logonId, #id, #EmailAddress, #user, #JobSeekerLoginV3_cbsys_login_email, #login_field, #login-appleId").val(object.username);
   $("#signin-password, #pass, #passwd, #password, #session_password-login, #login-password, #PasswordBox, #LoginForm_password, #ap_password, #userPassword, #user_password, #inputPassword, #login_password, #signup_password, #logonPassword, #id_password, #pwdId1, #Password, #JobSeekerLoginV3_cbsys_login_password, #login-password").val(object.password);
 }
