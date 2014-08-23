@@ -1,11 +1,11 @@
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://0.0.0.0:3000/dashboard", true);
+xhr.open("GET", "http://simplepw.herokuapp.com/dashboard", true);
 xhr.onreadystatechange = function() {
   if (xhr.readyState == 4) {
     console.log("xhr",xhr)
     if(xhr["status"] == 403){
       $('#whole').html("<div id='message'></div>");
-      $('#message').html("<br><br><br><center><h2>Please login to continue<br><br><a role='menuitem' tabindex='-1' href='http://0.0.0.0:3000/' target='_newtab'>Go to Simple PW</a></h2></center>")
+      $('#message').html("<br><br><br><center><h2>Please login to continue<br><br><a role='menuitem' tabindex='-1' href='http://simplepw.herokuapp.com/' target='_newtab'>Go to Simple PW</a></h2></center>")
     } else {
       if(xhr["status"] == 404){
 
@@ -13,7 +13,7 @@ xhr.onreadystatechange = function() {
         $('#message').html("<h2>No sites found!</h2>")
 
         $('#message').append("<p>Please add sites.</p>")
-        $('#message').append("<h3><a href='http://0.0.0.0:3000/' target='_newtab'>Go to Simple PW</a></h3>")
+        $('#message').append("<h3><a href='http://simplepw.herokuapp.com/' target='_newtab'>Go to Simple PW</a></h3>")
       } else {
 
           var sites = JSON.parse(xhr["response"])["dashboard"]

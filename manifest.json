@@ -12,7 +12,7 @@
     "128": "icon.png"
   },
   "permissions": [
-      "tabs", "http://*/*", "activeTab", "webRequest", "http://0.0.0.0:3000/dashboard"
+      "tabs", "http://*/*", "activeTab", "webRequest", "http://simplepw.herokuapp.com/dashboard"
     ],
   "content_scripts": [
         {

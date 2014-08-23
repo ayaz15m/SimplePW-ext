@@ -13,7 +13,7 @@ $('#form').submit(function() {
         'password' 	: $('#exampleInputPassword1').val()
       };
 
-      $.post('http://0.0.0.0:3000/dashboard', formData);
+      $.post('http://simplepw.herokuapp.com/dashboard', formData);
 
       $('#contact_form').html("<div id='message'></div>");
       $('#message').html("<h2>Site has been added!</h2>")
