@@ -2,7 +2,7 @@
   "name": "SimplePW",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "One Password does it all! Password Manager plugin to be used with account on http://simplepw.herokuapp.com/. If you don't have an account sign up today!",
+  "description": "SimplePW",
   "browser_action": {
     "default_icon": "icon.png",
     "default_menu": "Menu",
